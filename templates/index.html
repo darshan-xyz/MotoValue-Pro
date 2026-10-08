@@ -33,6 +33,11 @@
                 <p>Enter vehicle details below to generate a real-time market estimate.</p>
             </div>
 
+            <!-- Inline accessible error alert -->
+            <div id="errorAlert" class="error-alert hidden" role="alert" aria-live="assertive">
+                <span id="errorMessage"></span>
+            </div>
+
             <form id="predictionForm" class="form-grid">
                 
                 <div class="form-group">
@@ -123,7 +128,10 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="button" onclick="predictPrice()" class="btn-primary">Calculate Value</button>
+                    <button type="button" onclick="predictPrice()" id="submitBtn" class="btn-primary">
+                        <span id="btnSpinner" class="spinner hidden"></span>
+                        <span id="btnText">Calculate Value</span>
+                    </button>
                 </div>
 
             </form>

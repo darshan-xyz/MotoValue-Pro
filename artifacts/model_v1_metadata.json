@@ -1,0 +1,92 @@
+{
+  "version": "v1",
+  "timestamp": "2026-10-08T14:20:36.143864+00:00",
+  "model_class": "RandomForestRegressor",
+  "sklearn_version": "1.9.1",
+  "hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "feature_columns": [
+    "km_driven",
+    "mileage",
+    "engine",
+    "max_power",
+    "seats",
+    "brand_encoded",
+    "model_encoded",
+    "seller_type_Individual",
+    "seller_type_Trustmark Dealer",
+    "fuel_Diesel",
+    "fuel_Electric",
+    "fuel_LPG",
+    "fuel_Petrol",
+    "transmission_Manual"
+  ],
+  "feature_importances": {
+    "km_driven": 0.012521,
+    "mileage": 0.01159,
+    "engine": 0.025552,
+    "max_power": 0.934135,
+    "seats": 0.00065,
+    "brand_encoded": 0.002998,
+    "model_encoded": 0.006212,
+    "seller_type_Individual": 0.001488,
+    "seller_type_Trustmark Dealer": 0.000332,
+    "fuel_Diesel": 0.001091,
+    "fuel_Electric": 0.000286,
+    "fuel_LPG": 0.000216,
+    "fuel_Petrol": 0.001364,
+    "transmission_Manual": 0.001564
+  },
+  "num_brands": 15,
+  "num_models": 74,
+  "dataset_summary": {
+    "total_records": 500,
+    "train_records": 400,
+    "validation_records": 100,
+    "num_brands": 15,
+    "num_models": 74
+  },
+  "metrics": {
+    "train": {
+      "r2": 0.9918,
+      "mae": 34598.47,
+      "rmse": 44592.75,
+      "mape": 3.62
+    },
+    "validation": {
+      "r2": 0.9552,
+      "mae": 98815.39,
+      "rmse": 128094.01,
+      "mape": 9.86
+    },
+    "generalization_gap": 0.0366,
+    "passed": true,
+    "thresholds": {
+      "min_val_r2": 0.8,
+      "max_val_mae": 150000.0,
+      "max_val_rmse": 275000.0,
+      "max_val_mape": 25.0,
+      "max_generalization_gap": 0.15
+    },
+    "gate_failures": []
+  },
+  "quality_gates_passed": true
+}
